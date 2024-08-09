@@ -92,10 +92,11 @@ class HDExhuRev:HDHandgun{
 	override string gethelptext(){
 		LocalizeHelp();
 		if(cylinderopen)return
-		LWPHELP_FIRE..StringTable.Localize("$REVCWH_FIRE")//" Close cylinder\n"
+		LWPHELP_FIRE
+		..StringTable.Localize("$REVCWH_FIRE")//" Close cylinder\n"
 		..LWPHELP_ALTFIRE..StringTable.Localize("$REVCWH_ALTFIRE")..LWPHELP_ZOOM..StringTable.Localize("$REVCWH_ALTZOOM")
-		..LWPHELP_UNLOAD..StringTable.Localize("$REVCWH_UNLOAD")
-		..LWPHELP_RELOAD..StringTable.Localize("$REVCWH_RELOAD")..LWPHELP_FIREMODE..StringTable.Localize("$REVCWH_FMODPRELOAD")
+		..WEPHELP_UNLOAD.." Remove empty rounds \(double-tap to spin the gun\)\n"
+		..LWPHELP_RELOAD..StringTable.Localize(" Load round")
 		;
 		return
 		LWPHELP_FIRESHOOT
@@ -519,9 +520,9 @@ class HDExhuRev:HDHandgun{
 		EXHG E 1 offset(-7,66);
 		EXHG A 1 offset(12,96);
 		EXHG A 1 offset(10,86);
-		EXHG A 1 offset(8,64);
-		EXHG A 1 offset(4,50);
-		EXHG A 1 offset(2,39);
+		EXHG A 2 offset(8,64);
+		EXHG A 2 offset(4,50);
+		EXHG A 2 offset(2,39);
 		goto nope;
 	open_fastclose:
 		EXHG E 2;
@@ -538,11 +539,19 @@ class HDExhuRev:HDHandgun{
 		EXHG F 1 offset(0,42);
 		EXHG F 1 offset(0,54);
 		EXHG F 1 offset(0,68);
+		EXHG F 1 offset(0,68) A_StartSound("weapons/exhspin",8);
 		TNT1 A 6 A_ExtractAll();
-		EXHG F 1 offset(0,68);
-		EXHG F 1 offset(0,54);
-		EXHG F 1 offset(0,42);
-		EXHG F 1 offset(0,34);
+		EXHG F 1 offset(0,68) A_StartSound("weapons/deinocyl",8);
+		EXHG G 1 offset(0,63) A_StartSound("weapons/deinocyl",8);
+		EXHG F 1 offset(0,59) A_StartSound("weapons/deinocyl",8);
+		EXHG G 1 offset(0,54) A_StartSound("weapons/deinocyl",8);
+		EXHG F 1 offset(0,50) A_StartSound("weapons/deinocyl",8);
+		EXHG G 2 offset(0,46) A_StartSound("weapons/deinocyl",8);
+		EXHG F 2 offset(0,42) A_StartSound("weapons/deinocyl",8);
+		EXHG G 2 offset(0,40) A_StartSound("weapons/deinocyl",8);
+		EXHG F 2 offset(0,38) A_StartSound("weapons/deinocyl",8);
+		EXHG G 2 offset(0,36) A_StartSound("weapons/deinocyl",8);
+		EXHG F 2 offset(0,34) A_StartSound("weapons/deinocyl",8);
 		goto readyopen;
 
 	user1:
