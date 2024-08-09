@@ -306,12 +306,12 @@ class HDExhuRev:HDHandgun{
 			hdplayerpawn(self).gunbraced=false;
 		}
 		if(masterball){
-			A_MuzzleClimb(-frandom(0.8,1.6),-frandom(1.6,2.));
+			A_MuzzleClimb(-frandom(0.8,1.6),-frandom(2.2,2.4));
 			A_StartSound("weapons/exhblast",CHAN_WEAPON,CHANF_OVERLAP,20);
 			A_StartSound("weapons/deinoblast1",CHAN_WEAPON,CHANF_OVERLAP,1.9);
 			A_StartSound("weapons/deinoblast2",CHAN_WEAPON,CHANF_OVERLAP,1.9);
 		}else{
-			A_MuzzleClimb(-frandom(0.6,1.2),-frandom(0.8,1.8));
+			A_MuzzleClimb(-frandom(0.6,1.2),-frandom(2.2,2.4));
 			A_StartSound("weapons/exhblast",CHAN_WEAPON,CHANF_OVERLAP,20);
 			A_StartSound("weapons/deinoblast1",CHAN_WEAPON,CHANF_OVERLAP,1.9);
 			A_StartSound("weapons/deinoblast2",CHAN_WEAPON,CHANF_OVERLAP,1.9);
