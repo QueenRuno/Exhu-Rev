@@ -1,1 +1,3 @@
 weapons/exhumedshoot "exhblast.mp3" 
+
+weapons/exhspin dsbelt $volume weapons/exhspin 0.3
