@@ -1,0 +1,1 @@
+weapons/exhumedshoot "exhblast.mp3" 
