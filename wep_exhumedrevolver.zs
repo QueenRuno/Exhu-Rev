@@ -291,22 +291,22 @@ class HDExhuRev:HDHandgun{
 			return;
 		}
 		invoker.weaponstatus[BUGS_CYL1]--;
-		bool masterball=cyl==BUGS_MASTERBALL;
+		bool godscaliber=cyl==BUGS_MASTERBALL;
 
-		let bbb=HDBulletActor.FireBullet(self,masterball?"HDB_355":"HDB_9",spread:1.,speedfactor:frandom(1.05,1.06));
+		let bbb=HDBulletActor.FireBullet(self,godscaliber?"HDB_45ACP":"HDB_45ACP",spread:1.,speedfactor:frandom(1.05,1.06));
 		if(
-			frandom(0,ceilingz-floorz)<bbb.speed*(masterball?0.4:0.3)
-		)A_AlertMonsters(masterball?512:256);
+			frandom(0,ceilingz-floorz)<bbb.speed*(godscaliber?0.4:0.3)
+		)A_AlertMonsters(godscaliber?512:256);
 
 		A_GunFlash();
 		A_Light1();
 		A_ZoomRecoil(1);
-		HDFlashAlpha(masterball?72:64);
+		HDFlashAlpha(godscaliber?72:64);
 		A_StartSound("weapons/exhumedshoot",CHAN_WEAPON,CHANF_OVERLAP);
 		if(hdplayerpawn(self)){
 			hdplayerpawn(self).gunbraced=false;
 		}
-		if(masterball){
+		if(godscaliber){
 			A_MuzzleClimb(-frandom(0.8,1.6),-frandom(2.2,2.4));
 			A_StartSound("weapons/exhblast",CHAN_WEAPON,CHANF_OVERLAP,20);
 			A_StartSound("weapons/deinoblast1",CHAN_WEAPON,CHANF_OVERLAP,1.9);
