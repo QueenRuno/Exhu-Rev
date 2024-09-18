@@ -1,0 +1,4 @@
+weapons/deinoshoot "exhblast.mp3" 
+
+weapons/deinospin dsbelt $volume weapons/exhspin 0.3
+
