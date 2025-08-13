@@ -1,0 +1,8 @@
+// Spawn Table Entries
+addSpawnTableSingleEntry => { "tableName": "PistolReplaces", "name": "HDExhuRev", "weight": "1", "persists": "true" }
+
+// Handgun Drop Table
+addSpawnTableSingleEntry => { "tableName": "HDHandgunRandomDrop", "name": "HDExhuRev", "weight": "1", "chance": "16", "persists": "true" }
+
+// Ammo Usages
+addAmmoUser => { "ammoName": "HD45ACPAmmo", "name": "HDExhuRev" }
