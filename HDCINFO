@@ -1,0 +1,11 @@
+// Spawn Table Entries
+addSpawnTableSingleEntry => { "tableName": "PistolReplaces", "name": "HDExhuRev", "weight": "1", "persists": "true" }
+
+// Handgun Drop Table
+addSpawnTableSingleEntry => { "tableName": "HDHandgunRandomDrop", "name": "HDExhuRev", "weight": "1", "chance": "16", "persists": "true" }
+
+// Ammo Usages
+addAmmoUser => { "ammoName": "HD45ACPAmmo", "name": "HDExhuRev" }
+
+// Merchant Store Entries
+newMerchantStoreItem => { "type": "weapon", "category": "Queen Runo", "item": "HDExhuRev", "icon": "EXHUM0", "displayName": "N.W.M.P. Webley Commonwealth", "basePrice": "150", "flavorText": "This one's a bit dusty." }
